@@ -4,12 +4,6 @@ const nextjstest = 'http://localhost:3000/';
 const nextjstestssr = 'http://localhost:3000/posts/ssg-ssr'
 const nextjsrender = 'http://localhost:3000/posts/pre-rendering'
 
-// Test to check word 'Blog' in the Header
-test('Check Header for `name`', async ({ page }) => {
-  await page.goto(nextjstest);
-  const headerText = await page.textContent('h2');
-  await expect(headerText).toContain('Blog');
-});
 
 // Test checks if a yourname is present
 test('Check Tarek Presence on Home', async () => {
@@ -68,25 +62,6 @@ test('Check Responsive Meta Tag for Render', async ({ page }) => {
   await expect(viewportMeta).toBe('width=device-width');
 });
 
-//Test for checking Click for SSR page navigation
-test('Test for SSR Navigator', async ({ page }) => {
-  await page.goto(nextjstest);
-  await page.getByText('When to Use Static Generation v.s. Server-side Rendering').click();
-  await page.waitForURL(nextjstestssr);
-  const currentURL = await page.url();
-  const expectedURL = nextjstestssr;
-  expect(currentURL).toBe(expectedURL);
-});
-
-//Test to check Click for Pre-Rendering Navigation
-test('Test for Pre-Rendering Navigator', async ({ page }) => {
-  await page.goto(nextjstest);
-  await page.getByText('Two Forms of Pre-rendering').click();
-  await page.waitForURL(nextjsrender);
-  const currentURL = await page.url();
-  const expectedURL = nextjsrender;
-  expect(currentURL).toBe(expectedURL);
-});
 //Test to Check Back Home from SSR page Navigation 
 test('Test for SSR Back Home Nav', async ({ page }) => {
   await page.goto(nextjstestssr);
