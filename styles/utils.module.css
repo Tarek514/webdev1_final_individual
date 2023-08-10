@@ -50,3 +50,32 @@
 .lightText {
   color: #666;
 }
+
+
+.softBackground {
+  background-color: #aac0d5; 
+  padding: 20px; 
+}
+
+
+.projectSection {
+  margin-top: 40px;
+}
+
+.projectCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.projectCard {
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.projectCardSameWidth {
+  width: 270%; 
+}
