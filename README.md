@@ -9,5 +9,5 @@ https://www.figma.com/file/rc7MoSaIonJ8fq5GifxzZD/Portfolio-(Copy)?type=design&n
 ![Figma Draft](./images/figma2.PNG)
 ![Figma Draft](./images/figma3.PNG)
 
-## **Presentation**
+## **Presentation (Click on Image)**
 [![Portfolio Presentation](./images/figma1.PNG)](https://youtu.be/mRApAK9ZkKY)
